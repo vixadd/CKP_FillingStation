@@ -1,0 +1,26 @@
+INDEX VERSION 1.127+/Users/keithkroell/Documents/GitHub Stuff/CKP_FillingStation/src/.metadata/.plugins/org.eclipse.jdt.core
+156905802.index
+3321539481.index
+2428554107.index
+2725498208.index
+1384487945.index
+1833648217.index
+298109810.index
+1271342938.index
+3712507179.index
+3622583421.index
+850568439.index
+545134401.index
+1819685514.index
+2138123120.index
+2303493509.index
+1128719391.index
+2432717000.index
+2545238116.index
+3302703152.index
+2303784812.index
+2177805565.index
+1036057050.index
+3191966955.index
+3266567714.index
+2384028132.index
