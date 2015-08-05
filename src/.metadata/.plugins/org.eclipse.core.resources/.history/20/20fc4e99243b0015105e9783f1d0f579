@@ -18,7 +18,7 @@ import javax.swing.JTable;
 import java.util.Scanner;
 
 public class QuereyDB extends CreateDB{
-	public static final String SQL_Statement = "select * from Campers where last_name = 'Davis'";
+	public static final String SQL_Statement = "select * from Campers where LAST_NAME==Davis";
 	public static void main(String[] args) throws SQLException{
 		String result = "";
 		
