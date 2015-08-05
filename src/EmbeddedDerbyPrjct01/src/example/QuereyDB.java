@@ -1,15 +1,21 @@
 package example;
 
-import java.awt.GridLayout;
+import java.awt.BorderLayout;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
 import java.sql.*;
-import java.util.Vector;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.WindowConstants;
+import javax.swing.JScrollPane;
 
+import javax.swing.WindowConstants;
+import javax.swing.JTable;
+
+
+import java.util.Scanner;
 
 public class QuereyDB extends CreateDB{
 	public static final String SQL_Statement = "select * from Campers";
@@ -33,6 +39,7 @@ public class QuereyDB extends CreateDB{
 
 			// Set up JPanel for display of results.
 			
+			/*
 			JFrame frame = new JFrame("My Frame");
 			frame.setSize(640, 480);
 			JPanel panel = new JPanel();
@@ -42,15 +49,74 @@ public class QuereyDB extends CreateDB{
 			frame.add(panel);
 			frame.setLayout(new GridLayout());
 			frame.setVisible(true);
-			Vector textFieldVector = new Vector();
-			textFieldVector.setSize(20);
 			JTextField tf;
 			tf = new JTextField(result);
-			textFieldVector.add(tf);
+			tf.setMaximumSize( 
+				     new Dimension(Integer.MAX_VALUE, tf.getPreferredSize().height) );
 			panel.add(tf); //myPanel is the JPanel where I want to put the JTextFields
 			
 			panel.validate();
 			panel.repaint();
+			*/
 			
+			JFrame frameenco = new JFrame ("SQL Result");
+	        frameenco.setSize(492, 473);
+	        
+	       // User interface separation from Logic.
+	        
+	        JPanel panel = new JPanel (new GridBagLayout ());
+	        frameenco.getContentPane().add(panel, BorderLayout.NORTH);
+	        GridBagConstraints c = new GridBagConstraints ();
+	        c.insets = new Insets(15,15,15,15);
+	        JTable table = convertto_table(result);
+	        table.setSize(290, 380);
+	        JScrollPane scrollPane = new JScrollPane(table);
+	        scrollPane.setSize(394, 289);
+	        
+	        c.gridx = 3;
+	        c.gridy = 3;
+	        panel.add(scrollPane, c);
+	        
+	        frameenco.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+	       // System.out.println(result);
+	        frameenco.setVisible(true);
+	        
+	}
+	
+	public static JTable convertto_table(String t) {
+		ArrayList<String> list = new ArrayList<String>();
+		Scanner scan = new Scanner(t);
+		
+		while(scan.hasNext()) {
+			list.add(scan.nextLine());
+			//System.out.println(scan.nextLine());
+		}
+		
+		// Setting the column names.
+		String g = new String("");
+		g = list.get(0).replace(" ", "");
+		g = g.replace("|", ",");
+		String[] col_names = g.split(",");
+		
+		list.remove(0);
+		//obtaining data for the table;
+		
+		
+		String obj_data[][] = new String[list.size()][3];
+		
+		String l = new String("");
+		for(int i = 0; i < list.size(); i++) {
+			l = list.get(i);
+			l = l.replace(" ", "");
+			l = l.replace("|", ",");
+			String[] z = l.split(",");
+			for (int f = 0; f < 3; f++) {
+				obj_data[i][f] = z[f];
+				//System.out.println(z[f]);
+			}
+		}
+		
+		JTable table = new JTable(obj_data, col_names);
+		return table;
 	}
 }
