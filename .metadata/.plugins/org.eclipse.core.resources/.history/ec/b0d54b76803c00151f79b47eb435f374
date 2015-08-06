@@ -1,0 +1,13 @@
+package ckp.gui;
+
+import javax.swing.*;
+
+public class sample {
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("SQL Statement");
+		JPanel panel = new JPanel();
+		
+		panel.setSize(60, 20);
+		frame.setVisible(true);
+	}
+}
