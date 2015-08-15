@@ -1,6 +1,0 @@
-package example;
-public class QuereyDB {
-	public static void main(String[] args) {
-		
-	}
-}

@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Tue Aug 04 23:47:41 EDT 2015:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-014e-fbf8-c60b-00000082d4e0 
-on database directory /Users/keithkroell/Documents/GitHub Stuff/CKP_FillingStation/src/EmbeddedDerbyPrjct01/zadb with class loader sun.misc.Launcher$AppClassLoader@43900f17 
+Tue Aug 04 23:49:51 EDT 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-014e-fbfa-c046-00000086b020 
+on database directory /Users/keithkroell/Documents/GitHub Stuff/CKP_FillingStation/src/EmbeddedDerbyPrjct01/zadb with class loader sun.misc.Launcher$AppClassLoader@6647108e 
 Loaded from file:/Users/keithkroell/Documents/GitHub%20Stuff/CKP_FillingStation/src/EmbeddedDerbyPrjct01/lib/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.7.0_10-b18
