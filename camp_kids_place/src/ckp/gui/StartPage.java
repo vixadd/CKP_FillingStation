@@ -2,17 +2,26 @@ package ckp.gui;
 
 import java.awt.EventQueue;
 import java.awt.event.*;
+
 import javax.swing.JFrame;
+
 import java.awt.Color;
+
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+
 import java.awt.Font;
+
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
-import java.awt.SystemColor;
 
-public class StartPage {
+import java.awt.SystemColor;
+import java.sql.SQLException;
+
+import ckp.src.*;
+
+public class StartPage extends QuereyDB{
 
 	private JFrame frmCampKidsPlace;
 	private JTextField txtCampKidsPlace;
@@ -185,7 +194,12 @@ public class StartPage {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                
+            	try {
+					QuereyDB.table();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
             }
         
         });

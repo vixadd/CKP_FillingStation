@@ -1,0 +1,53 @@
+package ckp.gui;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import javax.swing.JTable;
+
+public class sampletabl {
+
+	private JFrame frmViewCampers;
+	private final JTable table = new JTable();
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					sampletabl window = new sampletabl();
+					window.frmViewCampers.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public sampletabl() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmViewCampers = new JFrame();
+		frmViewCampers.setTitle("View Campers");
+		frmViewCampers.setBounds(100, 100, 649, 426);
+		//frmViewCampers.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		frmViewCampers.getContentPane().add(panel, BorderLayout.CENTER);
+		panel.setLayout(null);
+		table.setBounds(6, 6, 637, 392);
+		panel.add(table);
+	}
+}
