@@ -69,7 +69,12 @@ public class StartPage {
 		txtrThisIsThe.setFont(new Font("Luminari", Font.PLAIN, 13));
 		txtrThisIsThe.setEditable(false);
 		txtrThisIsThe.setRows(2);
-		txtrThisIsThe.setText("This is the Central App for the Camp Kids Place filling station. The directory to the right allows for everything from viewing of campers to editing specifics and have people checkout items at the Filling Station which is the main purpose of this application.\n\nThe Direcotry is on the other side of this window. Use the instructions to navigate through the application.");
+		txtrThisIsThe.setText("This is the Central App for the Camp Kids Place filling station. "
+		                         +"The directory to the right allows for everything from viewing" 
+		                         +" of campers to editing specifics and have people checkout items"
+		                         +" at the Filling Station which is the main purpose of this application."
+		                         +"\n\nThe Directory is on the other side of this window. Use the instructions"
+		                         +" to navigate through the application.");
 		txtrThisIsThe.setBounds(10, 95, 247, 263);
 		frmCampKidsPlace.getContentPane().add(txtrThisIsThe);
 		
