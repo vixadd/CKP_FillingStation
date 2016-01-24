@@ -1,6 +1,0 @@
-package ckp.gui;
-
-
-public class sample {
-	
-}
