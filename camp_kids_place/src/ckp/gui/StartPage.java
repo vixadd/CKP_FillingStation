@@ -1,23 +1,14 @@
 package ckp.gui;
 
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import java.awt.Color;
 import javax.swing.JTextField;
-import java.awt.BorderLayout;
 import javax.swing.SwingConstants;
 import java.awt.Font;
-import javax.swing.JInternalFrame;
-import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
-import javax.swing.JTextPane;
 import javax.swing.JTextArea;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import javax.swing.JSplitPane;
 import javax.swing.JButton;
-import java.awt.Insets;
 import java.awt.SystemColor;
 
 public class StartPage {
