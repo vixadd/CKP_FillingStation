@@ -1,6 +1,7 @@
 package ckp.gui;
 
 import java.awt.EventQueue;
+import java.awt.event.*;
 import javax.swing.JFrame;
 import java.awt.Color;
 import javax.swing.JTextField;
@@ -52,6 +53,7 @@ public class StartPage {
 		frmCampKidsPlace.getContentPane().setLayout(null);
 		
 		txtCampKidsPlace = new JTextField();
+		txtCampKidsPlace.setEditable(false);
 		txtCampKidsPlace.setBounds(0, 0, 646, 83);
 		txtCampKidsPlace.setForeground(SystemColor.activeCaption);
 		txtCampKidsPlace.setFont(new Font("Luminari", Font.BOLD, 52));
@@ -136,5 +138,65 @@ public class StartPage {
 		txtCreatedByDavid.setColumns(10);
 		frmCampKidsPlace.setBounds(100, 100, 646, 426);
 		frmCampKidsPlace.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		// Outline Action Listener Declarations.
+		
+		
+		btnFillingStation.addActionListener(new ActionListener() {
+			 
+            /**
+             * Open the Filling station window.
+             * @param e is the action event
+             */
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                
+            }
+        
+        });
+		
+		button.addActionListener(new ActionListener() {
+			 
+            /**
+             * Open the Camper search Window
+             * @param e is the action event
+             */
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                
+            }
+        
+        });
+		
+		btnViewCampers.addActionListener(new ActionListener() {
+			 
+            /**
+             * Open the View Campers Window
+             * @param e is the action event
+             */
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                
+            }
+        
+        });
+		
+		btnSearchForCamper.addActionListener(new ActionListener() {
+			 
+            /**
+             * Open the search camper window.
+             * @param e is the action event
+             */
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                
+            }
+        
+        });
 	}
 }
